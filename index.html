@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formular</title>
+  </head>
+  <body>
+    <form>
+      <p>Wieviele Schrauben?: <input id="screw" type="number"></p>
+      <p>Wieviele Muttern?: <input id="screwNut" type="number"></p>
+      <p>Wieviele Unterlegsscheiben?: <input id="grommet"type="number"></p>
+        
+      <input type="button" id="submit" name="submit" onclick="buttonHandler()" value="Absenden">
+      <input type="reset" id="reset" name="reset" value="Formular löschen">
+    </form>
+    <script>
+     function buttonHandler(){
+      var output = (document.getElementById("screw").value*0.20) + (document.getElementById("screwNut").value*0.10) + (document.getElementById("grommet").value*0.05);
+        document.write(output);
+        document.getElementById("screw").value=" ";
+        document.getElementById("screwNut").value=" ";
+        document.getElementById("grommet").value=" ";
+      }
+
+    </script>
+  </body>
+</html>
